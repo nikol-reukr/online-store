@@ -1,4 +1,4 @@
-package onlinestore;
+package onlinestore.model;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -1,10 +1,12 @@
-package onlinestore;
+package onlinestore.service;
 
-import onlinestore.exceptions.ProductNotFoundException;
+import onlinestore.exception.ProductNotFoundException;
+import onlinestore.model.Product;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class ProductCatalogue {
+public class ProductService {
     private final List<Product> products = List.of(
             Product.builder()
                     .id(1)
@@ -32,11 +34,13 @@ public class ProductCatalogue {
                     .build()
     );
 
-    public void viewProducts() {
-        products.forEach(product -> System.out.printf("%s. %s: quantity %s, price %s%n", product.getId(), product.getName(), product.getQuantity(), product.getPrice()));
+    public List<Product> getAvailableProducts() {
+        return products.stream()
+                .filter(product -> product.getQuantity() > 0)
+                .collect(Collectors.toList());
     }
 
-    public Product getProduct(int productId) {
+    public Product getProduct(long productId) {
         for (int i = 0; i < products.size(); i++) {
             if (products.get(i).getId() == productId) {
                 return products.get(i);
