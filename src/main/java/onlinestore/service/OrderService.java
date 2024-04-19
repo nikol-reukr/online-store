@@ -14,9 +14,9 @@ public class OrderService {
     }
 
     public Order createNewOrder(long orderId) {
-        Order order = new Order();
-        order.setOrderId(orderId);
-        return order;
+        return Order.builder()
+                .orderId(orderId)
+                .build();
     }
 
     public void addProduct(Order order, Product product, int amount) {
