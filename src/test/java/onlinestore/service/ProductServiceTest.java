@@ -1,7 +1,6 @@
 package onlinestore.service;
 
-import onlinestore.model.Order;
-import onlinestore.model.Product;
+import onlinestore.model.product.Product;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

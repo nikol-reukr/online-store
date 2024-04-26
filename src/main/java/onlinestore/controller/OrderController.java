@@ -2,8 +2,8 @@ package onlinestore.controller;
 
 import onlinestore.exception.ProductAmountExceeded;
 import onlinestore.exception.ProductNotFoundException;
-import onlinestore.model.Order;
-import onlinestore.model.Product;
+import onlinestore.model.order.Order;
+import onlinestore.model.product.Product;
 import onlinestore.service.DiscountService;
 import onlinestore.service.OrderService;
 import onlinestore.service.ProductService;

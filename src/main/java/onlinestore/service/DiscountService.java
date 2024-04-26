@@ -1,6 +1,6 @@
 package onlinestore.service;
 
-import onlinestore.model.Order;
+import onlinestore.model.order.Order;
 
 import java.util.Map;
 

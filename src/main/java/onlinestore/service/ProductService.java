@@ -1,7 +1,7 @@
 package onlinestore.service;
 
 import onlinestore.exception.ProductNotFoundException;
-import onlinestore.model.Product;
+import onlinestore.model.product.Product;
 
 import java.util.List;
 import java.util.stream.Collectors;

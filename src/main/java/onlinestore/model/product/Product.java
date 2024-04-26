@@ -1,9 +1,12 @@
-package onlinestore.model;
+package onlinestore.model.product;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import onlinestore.model.product.Measure;
+
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -12,7 +15,8 @@ import lombok.ToString;
 public class Product {
     private long id;
     private String name;
-    private int quantity;
-    private float price;
+    private BigDecimal price;
+    private String manufacturer;
+    private Measure measure;
 }
 

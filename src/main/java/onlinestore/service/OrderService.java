@@ -1,7 +1,7 @@
 package onlinestore.service;
 
-import onlinestore.model.Order;
-import onlinestore.model.Product;
+import onlinestore.model.order.Order;
+import onlinestore.model.product.Product;
 
 import java.util.List;
 import java.util.stream.Collectors;
