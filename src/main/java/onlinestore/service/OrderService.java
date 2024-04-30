@@ -2,15 +2,25 @@ package onlinestore.service;
 
 import onlinestore.model.order.Order;
 import onlinestore.model.product.Product;
+import repository.OrderRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class OrderService {
-    private final List<Order> orders;
+    private OrderRepository orderRepository;
 
-    public OrderService(List<Order> orders) {
-        this.orders = orders;
+
+    public OrderService() {
+        this.orderRepository = new OrderRepository();
+    }
+
+    public void createOrder(Order order){
+        if(order.getProducts().isEmpty())
+            throw new RuntimeException("You need to have at least one product in the order");
+        //TODO: HW -> what should be validated? prepare a list
+
+        orderRepository.saveEntity(order);
     }
 
     public Order createNewOrder(long orderId) {

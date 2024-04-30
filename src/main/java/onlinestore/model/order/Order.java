@@ -13,10 +13,10 @@ import java.util.List;
 @Builder
 public class Order {
     private long id;
-    private final List<ProductInOrder> products = new ArrayList<>();
+    private final List<ProductInOrder> products = new ArrayList<>(); // empty
     private BigDecimal totalPrice;
-    private Client client;
+    private Client client; // 123
     private OrderState orderState;
-    private DevileryOption devileryOption;
-    private String deliveryDetails;
+    private DevileryOption devileryOption; // null
+    private String deliveryDetails; // ""
 }
