@@ -8,5 +8,5 @@ import lombok.Setter;
 public class Client {
     private String clientFirstName;
     private String clientLastName;
-    private String phoneNumber;
+    private String phoneNumber; // 127, abc
 }

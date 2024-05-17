@@ -17,7 +17,7 @@ public class OnlineStoreApplication {
         this.orderController = new OrderController(this.inputScanner, new OrderService(new ArrayList<>()), new ProductService(), new DiscountService());
     }
 
-    public static void main(String[] args) {
+    public static void main(String args) {
         new OnlineStoreApplication().start();
     }
 

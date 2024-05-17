@@ -8,5 +8,5 @@ import onlinestore.model.product.Product;
 @Setter
 public class ProductInOrder {
     private Product product;
-    private int number;
+    private float quantity;
 }
